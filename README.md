@@ -54,12 +54,6 @@ Use `lang` argument to push the language type
 
 | Name                    | Purpose                                                      |
 | ----------------------- | ------------------------------------------------------------ |
-| JOERN_HOME              | Joern installation directory                                 |
-| CPGGEN_HOST             | cpggen server host. Default 127.0.0.1                        |
-| CPGGEN_PORT             | cpggen server port. Default 7072                             |
-| CPGGEN_CONTAINER_CPU    | CPU units to use in container execution mode. Default 2      |
-| CPGGEN_CONTAINER_MEMORY | Memory units to use in container execution mode. Default 32g |
-| CPGGEN_MEMORY           | Heap memory to use for frontends. Default 32G                |
 | AT_DEBUG_MODE           | Set to debug to enable debug logging                         |
 
 ## License
