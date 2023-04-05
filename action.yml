@@ -1,0 +1,29 @@
+name: "cpggen"
+description: "Generate CPG for multiple languages for use with joern and Qwiet.AI."
+inputs:
+  src:
+    description: "Source directory. Defaults to workspace"
+    required: false
+    default: "/github/workspace"
+  out_dir:
+    description: "Output directory for generated CPG"
+    required: false
+    default: "/github/workspace/cpg_out"
+  lang:
+    description: "Language frontend to use. Defaults to autodetect which can generate multiple CPGs"
+    required: false
+    default: autodetect
+runs:
+  using: "docker"
+  image: "docker://ghcr.io/appthreat/cpggen:main"
+  args:
+    - "--src"
+    - ${{ inputs.src }}
+    - "--out_dir"
+    - ${{ inputs.out_dir }}
+    - "--lang"
+    - ${{ inputs.lang }}
+    - "--build"
+branding:
+  icon: "check"
+  color: "blue"
