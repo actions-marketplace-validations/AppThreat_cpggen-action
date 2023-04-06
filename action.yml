@@ -25,6 +25,8 @@ runs:
     - "--lang"
     - ${{ inputs.lang }}
     - "--build"
+    - "--joern-home"
+    - ""
 branding:
   icon: "check"
   color: "blue"
