@@ -30,6 +30,16 @@ Use `lang` argument to push the language type
     lang: java
 ```
 
+Optionally, the upload the generated CPGs as build artifacts use the below step.
+
+```
+- name: Upload cpg
+  uses: actions/upload-artifact@v1.0.0
+  with:
+    name: cpg
+    path: cpg_out
+```
+
 ## Languages supported
 
 | Language    | Requires build |
@@ -52,9 +62,9 @@ Use `lang` argument to push the language type
 
 ## Environment variables
 
-| Name                    | Purpose                                                      |
-| ----------------------- | ------------------------------------------------------------ |
-| AT_DEBUG_MODE           | Set to debug to enable debug logging                         |
+| Name          | Purpose                              |
+| ------------- | ------------------------------------ |
+| AT_DEBUG_MODE | Set to debug to enable debug logging |
 
 ## License
 
