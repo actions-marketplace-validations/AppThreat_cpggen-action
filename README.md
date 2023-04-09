@@ -21,7 +21,7 @@ Autodetect languages storing CPGs in a directory called `cpg_out`
     out_dir: "/github/workspace/cpg_out"
 ```
 
-Use `lang` argument to push the language type
+Use `lang` argument to force the language type. Comma separated values are accepted.
 
 ```
 - uses: AppThreat/cpggen-action@main
@@ -29,6 +29,19 @@ Use `lang` argument to push the language type
     out_dir: "/github/workspace/cpg_out"
     lang: java
 ```
+
+To export the generated CPGs to `dot` format, set the environment variable `CPG_EXPORT`.
+
+```
+- uses: AppThreat/cpggen-action@main
+  with:
+    out_dir: "/github/workspace/cpg_out"
+    lang: java
+  env:
+    CPG_EXPORT: true
+```
+
+To customize the export representation and format use the environment variables `CPG_EXPORT_REPR` and `CPG_EXPORT_FORMAT`. Refer to the [source](https://github.com/AppThreat/cpggen/blob/main/cpggen/cli.py#L133) for all supported values.
 
 Optionally, the upload the generated CPGs as build artifacts use the below step.
 
