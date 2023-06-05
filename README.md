@@ -9,7 +9,7 @@
  ╚═════╝╚═╝      ╚═════╝
 ```
 
-This action wraps CPG Generator (cpggen) a python cli tool to generate [Code Property Graph](https://cpg.joern.io) for multiple languages. The generated CPG can be directly imported to [Joern](https://joern.io) or uploaded to [Qwiet.AI](https://docs.shiftleft.io/home) for analysis.
+This action wraps CPG Generator (cpggen) a python cli tool to generate [Code Property Graph](https://cpg.joern.io) for multiple languages. The generated CPG can be directly imported to [Joern](https://joern.io) for analysis.
 
 ## Usage
 
@@ -60,16 +60,11 @@ Optionally, the upload the generated CPGs as build artifacts use the below step.
 | C           | No             |
 | C++         | No             |
 | Java        | No (\*)        |
-| Scala       | Yes            |
-| Jsp         | Yes            |
-| Jar/War     | No             |
 | JavaScript  | No             |
 | TypeScript  | No             |
 | Kotlin      | No (\*)        |
 | Php         | No             |
 | Python      | No             |
-| C# / dotnet | Yes            |
-| Go          | Yes            |
 
 (\*) - Precision could be improved with dependencies
 
